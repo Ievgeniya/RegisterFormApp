@@ -1,0 +1,31 @@
+﻿.login-form-container {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.reg-form-container {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+.err-form-container {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+.registration{
+    padding: 16px;
+}
+
+.errormessage{
+    color:red;
+}
+.margininputcontainer {
+    margin: 6px;
+}
+    .field-validation-error{
+        color:red;
+
+}

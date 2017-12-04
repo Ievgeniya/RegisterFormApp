@@ -1,0 +1,34 @@
+﻿@model TestProjectDomain.Entities.UsersData
+
+@{
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div id="superMain" class="login-form-container">
+
+        <div class="form-input">
+            <label>Фамилия:</label>
+            @Model.Surname
+        </div>
+        <div class="form-input">
+            <label>Имя:</label>
+            @Model.Name
+        </div>
+        <div class="form-input">
+            <label>Email:</label>
+            @Model.Email
+        </div>
+        <div class="form-input">
+            <label>Мобильный телефон:</label>
+            @Model.Mobile
+        </div>
+            @Html.ActionLink("Изменить", "Update", new { userId = Model.UserId}, new { @class = "btn btn-primary" })
+    
+    <div class="margininputcontainer">
+        @Html.ActionLink("Удалить", "Delete", new { userid = Model.UserId }, new { @class = "btn btn-primary" })
+    </div>
+</div>

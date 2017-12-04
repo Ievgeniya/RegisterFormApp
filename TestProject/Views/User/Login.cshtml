@@ -1,0 +1,45 @@
+﻿@model TestProjectDomain.Entities.LoginModel
+
+@{
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<div class="login-form-container">
+
+    <div class="errormessage">
+        @ViewBag.Message
+    </div>
+
+
+
+    @using (Html.BeginForm("Login", "User"))
+            {
+
+        <div class="form-input">
+            <label>Email</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+                <div class="form-input">
+                    <label>Пароль</label>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div>
+                    <div class="margininputcontainer">
+                        <input class="btn btn-primary" name="send" type="submit" id="send" value="Аутентифицироваться" />
+                    </div>
+                </div>
+
+
+    }
+    <div class="registration">
+        <p>Если у вас нет учетной записи, пройдите регистрацию.</p>
+        @Html.ActionLink("Регистрация", "Create", new { id = "" }, new { @class = "btn btn-primary" })
+    </div>
+
+</div>
